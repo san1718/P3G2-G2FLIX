@@ -19,6 +19,8 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 3. Authentication: JWT
 
 ## Summary
+This search engine will let the user to save their favorite titles and recommend snacks to go with it, if wanted.
+The user will be able to delete the titles later on if desired the list if not needed anymore.
 
 ## Links
 [Home](https://github.com/san1718/P3G2-Are_You_Not_Entertained)
