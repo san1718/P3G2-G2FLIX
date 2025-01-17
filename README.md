@@ -33,3 +33,9 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 <img width="1000" alt="Search" src="">
 <img width="1000" alt="SaveList" src="">
 <img width="1000" alt="RemoveList" src="">
+
+## Credits
+* [Sung Min An](https://github.com/san1718)
+* [Art Camacho](https://github.com/ArtCamacho)
+* [Maritza Diaz](https://github.com/maritzadiaz77)
+* [Crispin Duarte](https://github.com/CrispinDD1)
