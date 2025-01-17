@@ -9,9 +9,9 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 ## Features
 * Sign Up / Log In
 * Search for what is of interest
+* Get snack recommendations
 * Save your favorite books, movies, tv shows, or snacks
 * Remove saved items from the list
-* 
 
 ## Technologies Used
 1. Front-end: React, HTML/CSS
@@ -21,7 +21,7 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 ## Summary
 
 ## Links
-[Home]()
+[Home](https://github.com/san1718/P3G2-Are_You_Not_Entertained)
 <br />
 [Deployed]()
 <br />
@@ -29,3 +29,7 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 <br />
 
 ## Screenshots
+<img width="1000" alt="Homepage" src="">
+<img width="1000" alt="Search" src="">
+<img width="1000" alt="SaveList" src="">
+<img width="1000" alt="RemoveList" src="">
