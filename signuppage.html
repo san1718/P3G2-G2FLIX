@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockflix - Sign Up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #0070c0;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .signup-container {
+        background-color: #222;
+        padding: 40px;
+        border-radius: 5px;
+        width: 400px;
+      }
+      .form-label {
+        color: #ffda00;
+      }
+      .form-control {
+        background-color: #333;
+        border-color: #555;
+        color: white;
+      }
+      .btn-primary {
+        background-color: #ffda00;
+        border-color: #ffda00;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container signup-container">
+      <h2 class="text-center mb-4" style="color: #ffda00">
+        Sign Up for G2FLIX
+      </h2>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe" />
+          <label class="form-check-label" for="rememberMe" style="color: white"
+            >Remember me</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+      </form>
+      <div class="text-center mt-3">
+        <p style="color: white">
+          Already have an account?
+          <a href="#" style="color: #ffda00">Sign in</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
