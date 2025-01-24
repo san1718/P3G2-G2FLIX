@@ -11,7 +11,7 @@ module.exports = {
       code: "UNAUTHENTICATED",
     },
   }),
-
+// Create new user error
   // function for our authenticated routes
   authMiddleware: function ({ req }) {
     // allows token to be sent via  req.query or headers
@@ -32,7 +32,7 @@ module.exports = {
       req.user = data;
     } catch {
       console.log('Invalid token');
-      return res.status(401).json({ message: 'invalid token!' });
+      // return res.status(401).json({ message: 'invalid token!' });
     }
     return req;
     },
