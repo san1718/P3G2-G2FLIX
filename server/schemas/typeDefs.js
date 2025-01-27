@@ -31,6 +31,24 @@ const typeDefs = `
         link: String
     }
 
+    type Movie {
+        movieID: ID!
+        authors: [String]
+        description: String!
+        title: String!
+        image: String
+        link: String
+    }
+    
+    type tvShow {
+        tvShowID: ID!
+        authors: [String]
+        description: String!
+        title: String!
+        image: String
+        link: String
+    }
+    
     type Query {
         me: User
     }
