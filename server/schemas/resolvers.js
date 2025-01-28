@@ -1,6 +1,4 @@
-// Changing all to media from books/movies/etc (vars)
-
-const { User, Book } = require("../models");
+const { User, Book, Movie } = require("../models");
 const { AuthenticationError, signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -63,8 +61,9 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
+
     // Save movie(s)
-    saveMovie: async (parent, args, context) => {
+    saveBook: async (parent, args, context) => {
       if (context.user) {
         const userUpdate = await User.findOneAndUpdate(
           { _id: context.user._id },
@@ -76,7 +75,7 @@ const resolvers = {
       throw AuthenticationError;
     },
     // Remove movie(s)
-    removeMovie: async (parent, args, context) => {
+    removeBook: async (parent, args, context) => {
       if (context.user) {
         const userUpdate = await User.findOneAndUpdate(
           { _id: context.user._id },

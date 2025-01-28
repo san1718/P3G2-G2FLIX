@@ -5,7 +5,7 @@ import { getMe, deleteBook } from "../utils/API";
 import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
 
-const SavedBooks = () => {
+const SavedTitles = () => {
   const [userData, setUserData] = useState({});
 
   // use this to determine if `useEffect()` hook needs to run again
@@ -113,4 +113,4 @@ const SavedBooks = () => {
   );
 };
 
-export default SavedBooks;
+export default SavedTitles;

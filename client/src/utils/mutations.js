@@ -43,3 +43,23 @@ export const REMOVEBOOK = gql`
     }
   }
 `;
+
+export const SAVEMOVIE = gql`
+  mutation saveMovie($movieInput: MovieInput) {
+    saveMovie(moiveInput: $movieInput) {
+      _id
+      username
+      movieCount
+    }
+  }
+`;
+
+export const REMOVEMOVIE = gql`
+  mutation removeMovie($movieId: ID!) {
+    removeMovie(movieId: $movieId) {
+      _id
+      username
+      movieCount
+    }
+  }
+`;
