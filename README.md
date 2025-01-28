@@ -27,7 +27,7 @@ The user will be able to delete the titles later on if desired the list if not n
 <br />
 [Deployed]()
 <br />
-[Template](https://docs.google.com/presentation/d/1fBD6A1IVVCHKd_RoRnY85M1LM0RRXkNRnW4dkwoTE48/edit?usp=sharing)
+[Template](https://docs.google.com/presentation/d/1H0xoplE5sRs19leBDIDV17CHCfoiZSoUe-ygdRDwzYM/edit#slide=id.p1)
 <br />
 
 ## Screenshots
