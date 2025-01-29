@@ -1,42 +1,31 @@
 import { useState, useEffect } from "react";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
 
-import { getMe, deleteBook, deleteMovie } from "../utils/API";
+import { useQuery, useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
-import { removeBookId } from "../utils/localStorage";
-import { removeMovieId } from "../utils/localStorage";
+import { QUERY_ME } from "../utils/queries";
+import { REMOVEBOOK, REMOVEMOVIE } from "../utils/mutations";
+import { removeBookId, removeMovieId } from "../utils/localStorage";
 
 const SavedTitles = () => {
-  const [userData, setUserData] = useState({});
-
-  // use this to determine if `useEffect()` hook needs to run again
-  const userDataLength = Object.keys(userData).length;
-
-  useEffect(() => {
-    const getUserData = async () => {
-      try {
-        const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-        if (!token) {
-          return false;
-        }
-
-        const response = await getMe(token);
-
-        if (!response.ok) {
-          throw new Error("something went wrong!");
-        }
-
-        const user = await response.json();
-        setUserData(user);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    getUserData();
-  }, [userDataLength]);
-
+  const { loading, data, error: userError } = useQuery(QUERY_ME);
+  const [removeBook, { error: bookError }] = useMutation(REMOVEBOOK,
+    {
+      refetchQueries: [
+        QUERY_ME,
+        'me'
+      ]
+    }
+  );
+  const [removeMovie, { error: movieError }] = useMutation(REMOVEMOVIE,
+    {
+      refetchQueries: [
+        QUERY_ME,
+        'me'
+      ]
+    }
+  );
+  const userData = data?.me || [];
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -46,31 +35,45 @@ const SavedTitles = () => {
     }
 
     try {
-      const response = await deleteBook(bookId, token);
-
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
-      const updatedUser = await response.json();
-      setUserData(updatedUser);
+      const { data, error } = await removeBook({ variables: { bookId } });
+      console.log(error);
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
     }
   };
+  
+  const handleDeleteMovie = async (movieId) => {
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      return false;
+    }
+
+    try {
+      const { data, error } = await removeMovie({ variables: { movieId } });
+      console.log(error);
+      // upon success, remove movie's id from localStorage
+      removeMovieId(movieId);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
+  }
+  if (userError) {
+    console.log(userError);
   }
 
   return (
     <>
       <div fluid className="text-light bg-dark p-5">
         <Container>
-          <h1>Viewing saved books!</h1>
+          <h1>Viewing saved titles!</h1>
         </Container>
       </div>
       <Container>
@@ -102,6 +105,43 @@ const SavedTitles = () => {
                       onClick={() => handleDeleteBook(book.bookId)}
                     >
                       Delete this Book!
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
+      <Container>
+        <h2 className="pt-5">
+          {userData.savedMovies.length
+            ? `Viewing ${userData.savedMovies.length} saved ${
+                userData.savedMovies.length === 1 ? "movie" : "movies"
+              }:`
+            : "You have no saved movies!"}
+        </h2>
+        <Row>
+          {userData.savedMovies.map((movie) => {
+            return (
+              <Col md="4">
+                <Card key={movie.movieId} border="dark">
+                  {movie.image ? (
+                    <Card.Img
+                      src={movie.image}
+                      alt={`The poster for ${movie.title}`}
+                      variant="top"
+                    />
+                  ) : null}
+                  <Card.Body>
+                    <Card.Title>{movie.title}</Card.Title>
+                    <p className="small">Authors: {movie.authors}</p>
+                    <Card.Text>{movie.description}</Card.Text>
+                    <Button
+                      className="btn-block btn-danger"
+                      onClick={() => handleDeleteMovie(movie.movieId)}
+                    >
+                      Delete this Movie!
                     </Button>
                   </Card.Body>
                 </Card>

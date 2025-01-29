@@ -46,7 +46,7 @@ export const REMOVEBOOK = gql`
 
 export const SAVEMOVIE = gql`
   mutation saveMovie($movieInput: MovieInput) {
-    saveMovie(moiveInput: $movieInput) {
+    saveMovie(movieInput: $movieInput) {
       _id
       username
       movieCount

@@ -1,7 +1,9 @@
-import { query } from "../../../server/models/Book";
-import { section } from "../../../server/models/Movie";
 
-const apiKey = process.env.OMDb;
+
+const apiKey = "a47de09";
+
+// import { query } from "../../../server/models/Book";
+// import { section } from "../../../server/models/Movie";
 
 // v Move to GraphQL v
 
@@ -47,17 +49,18 @@ const apiKey = process.env.OMDb;
 //   });
 // };
 
-// ^ Move to GraphQL ^
 
 // remove saved book data for a logged in user
-export const deleteBook = (bookId, token) => {
-  return fetch(`/api/users/books/${bookId}`, {
-    method: "DELETE",
-    headers: {
-      authorization: `Bearer ${token}`,
-    },
-  });
-};
+// export const deleteBook = (bookId, token) => {
+  //   return fetch(`/api/users/books/${bookId}`, {
+    //     method: "DELETE",
+    //     headers: {
+      //       authorization: `Bearer ${token}`,
+      //     },
+      //   });
+      // };
+      
+// ^ Move to GraphQL ^
 
 // make a search to google books api
 // https://www.googleapis.com/books/v1/volumes?q=harry+potter

@@ -11,14 +11,13 @@ const typeDefs = `
         savedMovies: [Movie]
         
     }
-
+    
     type Book {
-        bookID: ID!
+        bookId: ID!
         authors: [String]
         description: String!
         title: String!
         image: String
-        link: String
     }
 
     type Auth {
@@ -32,25 +31,22 @@ const typeDefs = `
         description: String!
         title: String!
         image: String
-        link: String
     }
 
     type Movie {
-        movieID: ID!
-        authors: [String]
+        movieId: ID!
+        director: String
         description: String!
         title: String!
         image: String
-        link: String
     }
 
     input MovieInput {
-        bookId: String!
-        authors: [String]
+        movieId: String!
+        director: String
         description: String!
         title: String!
         image: String
-        link: String
     }
     
     type Query {

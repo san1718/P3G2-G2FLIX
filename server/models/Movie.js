@@ -12,7 +12,7 @@ const movieSchema = new Schema({
     required: true,
   },
   // saved movie id from OMDb
-  mediaId: {
+  movieId: {
     type: String,
     required: true,
   },
