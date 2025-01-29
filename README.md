@@ -25,12 +25,12 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 
 ## Installation / Usage
 1. Install dependencies:
-Server
-* cd server
-* npm install
-Client
-* cd ../client
-* npm install
+* Server
+    * cd server
+    * npm install
+* Client
+    * cd ../client
+    * npm install
 2. Set up .env file:
     * OMDb=your_apiKey
 3. Run application:
