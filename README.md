@@ -3,6 +3,7 @@
 ## Table of Contents
 * [Overview](#overview)
 * [Features](#features)
+* [Installation / Usage](#installation--usage)
 * [Technologies Used](#technologies-used)
 * [Summary](#summary)
 * [Links](#links)
@@ -22,6 +23,21 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 * Save your favorite books, movies, tv shows, or snacks
 * Remove saved items from the list
 
+## Installation / Usage
+1. Install dependencies:
+Server
+* cd server
+* npm install
+Client
+* cd ../client
+* npm install
+2. Set up .env file:
+    * OMDb=your_apiKey
+3. Run application:
+    * npm run develop
+4. Navigate to:
+    * localhost:3000
+
 ## Technologies Used
 1. Front-end: React, HTML/CSS
 2. Back-end: Node.js, Express, MongoDB
@@ -32,8 +48,8 @@ This search engine will let the user to save their favorite titles and recommend
 The user will be able to delete the titles later on if desired the list if not needed anymore.
 
 ## Links
-* [Home](https://github.com/san1718/P3G2-Are_You_Not_Entertained)
-* [Try it (Deployed)]()
+* [Home](https://github.com/san1718/P3G2-G2FLIX)
+* [Try it (Demo)](https://p3g2-g2flix.onrender.com/)
 * [Template](https://docs.google.com/presentation/d/1fBD6A1IVVCHKd_RoRnY85M1LM0RRXkNRnW4dkwoTE48/edit?usp=sharing)
 
 ## Screenshots
