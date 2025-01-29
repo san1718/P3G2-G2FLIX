@@ -1,5 +1,14 @@
 # Project 3: Are you not Entertained?
 
+## Table of Contents
+* [Overview](#overview)
+* [Features](#features)
+* [Technologies Used](#technologies-used)
+* [Summary](#summary)
+* [Links](#links)
+* [Screenshots](#screenshots)
+* [Credits](#credits)
+
 ## Overview
 You have been looking for a series you watched long time ago don't want to forget what it was? Or planning to buy it later?
 This application will let the user search for the books, movies, tv shows, and snacks from the search engine.
@@ -23,12 +32,9 @@ This search engine will let the user to save their favorite titles and recommend
 The user will be able to delete the titles later on if desired the list if not needed anymore.
 
 ## Links
-[Home](https://github.com/san1718/P3G2-Are_You_Not_Entertained)
-<br />
-[Deployed]()
-<br />
-[Template](https://docs.google.com/presentation/d/1H0xoplE5sRs19leBDIDV17CHCfoiZSoUe-ygdRDwzYM/edit#slide=id.p1)
-<br />
+* [Home](https://github.com/san1718/P3G2-Are_You_Not_Entertained)
+* [Try it (Deployed)]()
+* [Template](https://docs.google.com/presentation/d/1fBD6A1IVVCHKd_RoRnY85M1LM0RRXkNRnW4dkwoTE48/edit?usp=sharing)
 
 ## Screenshots
 <img width="1000" alt="Homepage" src="">

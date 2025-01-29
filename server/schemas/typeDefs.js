@@ -1,3 +1,4 @@
+// Using books(googleBooks) and movies(OMDb)
 const typeDefs = `
 
     type User {
@@ -6,15 +7,17 @@ const typeDefs = `
         email: String!
         bookCount: Int
         savedBooks: [Book]
+        movieCount: Int
+        savedMovies: [Movie]
+        
     }
-
+    
     type Book {
-        bookID: ID!
+        bookId: ID!
         authors: [String]
         description: String!
         title: String!
         image: String
-        link: String
     }
 
     type Auth {
@@ -28,9 +31,24 @@ const typeDefs = `
         description: String!
         title: String!
         image: String
-        link: String
     }
 
+    type Movie {
+        movieId: ID!
+        director: String
+        description: String!
+        title: String!
+        image: String
+    }
+
+    input MovieInput {
+        movieId: String!
+        director: String
+        description: String!
+        title: String!
+        image: String
+    }
+    
     type Query {
         me: User
     }
@@ -38,8 +56,12 @@ const typeDefs = `
     type Mutation {
         loginUser(email: String!, password: String!): Auth
         userAdd(username: String!, email: String!, password: String!): Auth
+        
         saveBook(bookInput: BookInput): User
         removeBook(bookId: ID!): User
+        
+        saveMovie(movieInput: MovieInput): User
+        removeMovie(movieId: ID!): User
     }
 `;
 
