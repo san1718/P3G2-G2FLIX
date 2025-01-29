@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Card, Button, Row, Col } from "react-bootstrap";
-
+import { Container, Card, Button, Row, Col, Accordion } from "react-bootstrap";
 import { useQuery, useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { QUERY_ME } from "../utils/queries";
@@ -9,22 +8,12 @@ import { removeBookId, removeMovieId } from "../utils/localStorage";
 
 const SavedTitles = () => {
   const { loading, data, error: userError } = useQuery(QUERY_ME);
-  const [removeBook, { error: bookError }] = useMutation(REMOVEBOOK,
-    {
-      refetchQueries: [
-        QUERY_ME,
-        'me'
-      ]
-    }
-  );
-  const [removeMovie, { error: movieError }] = useMutation(REMOVEMOVIE,
-    {
-      refetchQueries: [
-        QUERY_ME,
-        'me'
-      ]
-    }
-  );
+  const [removeBook, { error: bookError }] = useMutation(REMOVEBOOK, {
+    refetchQueries: [QUERY_ME, "me"],
+  });
+  const [removeMovie, { error: movieError }] = useMutation(REMOVEMOVIE, {
+    refetchQueries: [QUERY_ME, "me"],
+  });
   const userData = data?.me || [];
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
@@ -43,7 +32,7 @@ const SavedTitles = () => {
       console.error(err);
     }
   };
-  
+
   const handleDeleteMovie = async (movieId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -99,7 +88,13 @@ const SavedTitles = () => {
                   <Card.Body>
                     <Card.Title>{book.title}</Card.Title>
                     <p className="small">Authors: {book.authors}</p>
-                    <Card.Text>{book.description}</Card.Text>
+                    {/* <Card.Text>{book.description}</Card.Text> */}
+                    <Accordion defaultActiveKey="0">
+                      <Accordion.Item eventKey="0">
+                        <Accordion.Header>Description</Accordion.Header>
+                        <Accordion.Body>{book.description}</Accordion.Body>
+                      </Accordion.Item>
+                    </Accordion>
                     <Button
                       className="btn-block btn-danger"
                       onClick={() => handleDeleteBook(book.bookId)}
