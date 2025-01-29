@@ -1,4 +1,4 @@
-# Project 3: Are you not Entertained?
+# G2FLIX: Are you not Entertained?
 
 ## Table of Contents
 * [Overview](#overview)
