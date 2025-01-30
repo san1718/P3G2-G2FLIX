@@ -1,5 +1,16 @@
-h1 {
-  color: aqua;
+.header-container {
   background-color: black;
-  align-items: center;
+  color: aqua;
+  text-align:center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0;
 }
