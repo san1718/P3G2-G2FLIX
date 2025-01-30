@@ -131,7 +131,12 @@ const SavedTitles = () => {
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <p className="small">Authors: {movie.authors}</p>
-                    <Card.Text>{movie.description}</Card.Text>
+                    <Accordion defaultActiveKey="0">
+                      <Accordion.Item eventKey="0">
+                        <Accordion.Header>Description</Accordion.Header>
+                        <Accordion.Body>{movie.description}</Accordion.Body>
+                      </Accordion.Item>
+                    </Accordion>
                     <Button
                       className="btn-block btn-danger"
                       onClick={() => handleDeleteMovie(movie.movieId)}
