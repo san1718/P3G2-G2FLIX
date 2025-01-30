@@ -65,7 +65,7 @@ const SignupForm = () => {
   return (
     <>
       {/* This is needed for the validation functionality above */}
-      <Form onSubmit={handleFormSubmit}>
+      <Form className="p-5 bg-dark border rounded shadow-sm" onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert
           dismissible
@@ -77,7 +77,7 @@ const SignupForm = () => {
         </Alert>
 
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="username">Username</Form.Label>
+          <Form.Label htmlFor="username" className="text-success">Username</Form.Label>
           <Form.Control
             type="text"
             placeholder="Your username"
@@ -85,6 +85,7 @@ const SignupForm = () => {
             onChange={handleInputChange}
             value={userFormData.username}
             required
+            className="rounded-3"
           />
           <Form.Control.Feedback type="invalid">
             Username is required!
@@ -92,7 +93,7 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="email">Email</Form.Label>
+          <Form.Label htmlFor="email" className="text-success">Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Your email address"
@@ -100,6 +101,7 @@ const SignupForm = () => {
             onChange={handleInputChange}
             value={userFormData.email}
             required
+            className="rounded-3"
           />
           <Form.Control.Feedback type="invalid">
             Email is required!
@@ -107,7 +109,7 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label htmlFor="password">Password</Form.Label>
+          <Form.Label htmlFor="password" className="text-success">Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Your password"
@@ -115,6 +117,7 @@ const SignupForm = () => {
             onChange={handleInputChange}
             value={userFormData.password}
             required
+            className="rounded-3"
           />
           <Form.Control.Feedback type="invalid">
             Password is required!
@@ -130,6 +133,7 @@ const SignupForm = () => {
           }
           type="submit"
           variant="success"
+          className="w-100 fw-bold"
         >
           Submit
         </Button>

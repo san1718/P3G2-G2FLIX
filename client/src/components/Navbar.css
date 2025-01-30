@@ -6,19 +6,18 @@
 }
 
 .nav-link:hover {
-  color: aqua; /* Highlight color on hover */
+  color: aqua; 
 }
 
-/* Make navbar background color dark */
+
 .container-fluid {
-  background-color: #343a40; /* Darker color for navbar */
+  background-color: #343a40; 
 }
 
 .container {
-  background-color: #343a40; /* Keep consistent navbar background */
+  background-color: #343a40; 
 }
 
-/* Adjusting navbar brand */
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
@@ -26,18 +25,15 @@
 }
 
 .navbar-brand:hover {
-  color: aqua; /* Add hover effect to brand */
+  color: aqua; 
 }
 
-/* Style for the navbar when collapsed */
-.navbar-collapse {
-  justify-content: flex-end; /* Align items to the right */
+.modal-body {
+  background-color: black; 
+  padding: 2rem;
 }
 
-.navbar-toggle {
-  border-color: #ffffff; /* White toggle icon */
-}
-
-.navbar-toggler-icon {
-  background-color: #ffffff; /* White icon for the toggle */
+.modal-content {
+  background-color: #343a40; 
+  color: white; 
 }
