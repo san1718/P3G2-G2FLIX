@@ -1,9 +1,43 @@
 .nav-link {
-  color:aqua;
+  color: #ffffff; /* White text color */
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s ease; /* Adding transition effect */
 }
+
+.nav-link:hover {
+  color: aqua; /* Highlight color on hover */
+}
+
+/* Make navbar background color dark */
 .container-fluid {
-    background-color: black;
+  background-color: #343a40; /* Darker color for navbar */
 }
+
 .container {
-    background-color: black;
+  background-color: #343a40; /* Keep consistent navbar background */
+}
+
+/* Adjusting navbar brand */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-brand:hover {
+  color: aqua; /* Add hover effect to brand */
+}
+
+/* Style for the navbar when collapsed */
+.navbar-collapse {
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar-toggle {
+  border-color: #ffffff; /* White toggle icon */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* White icon for the toggle */
 }
