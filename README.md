@@ -53,10 +53,10 @@ The user will be able to delete the titles later on if desired the list if not n
 * [Template](https://docs.google.com/presentation/d/1fBD6A1IVVCHKd_RoRnY85M1LM0RRXkNRnW4dkwoTE48/edit?usp=sharing)
 
 ## Screenshots
-<img width="1000" alt="Homepage" src="">
-<img width="1000" alt="Search" src="">
-<img width="1000" alt="SaveList" src="">
-<img width="1000" alt="RemoveList" src="">
+<img width="1000" alt="Homepage" src="https://github.com/san1718/P3G2-G2FLIX/blob/main/images/Homepage.png">
+<img width="1000" alt="LogInSignUp" src="https://github.com/san1718/P3G2-G2FLIX/blob/main/images/LoginSignUp.png">
+<img width="1000" alt="SaveList" src="https://github.com/san1718/P3G2-G2FLIX/blob/main/images/SavedBooks.png">
+<img width="1000" alt="RemoveList" src="https://github.com/san1718/P3G2-G2FLIX/blob/main/images/Delete.png">
 
 ## Credits
 * [Sung Min An](https://github.com/san1718)
