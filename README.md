@@ -49,7 +49,7 @@ The user will be able to delete the titles later on if desired the list if not n
 
 ## Links
 * [Home](https://github.com/san1718/P3G2-G2FLIX)
-* [Try it (Demo)](https://p3g2-g2flix.onrender.com/)
+* [Try it! (Demo)](https://p3g2-g2flix.onrender.com/)
 * [Template](https://docs.google.com/presentation/d/1fBD6A1IVVCHKd_RoRnY85M1LM0RRXkNRnW4dkwoTE48/edit?usp=sharing)
 
 ## Screenshots
