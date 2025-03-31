@@ -24,19 +24,34 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 * Remove saved items from the list
 
 ## Installation / Usage
-1. Install dependencies:
+If you want to have it in local:
+1. Clone repository:
+    ```bash
+    git clone git@github.com:san1718/P3G2-G2FLIX.git
+    ```
+2. Install dependencies:
 * Server
-    * cd server
-    * npm install
+    ```bash
+        cd server
+        npm install
+    ```
 * Client
-    * cd ../client
-    * npm install
-2. Set up .env file:
-    * OMDb=your_apiKey
-3. Run application:
-    * npm run develop
-4. Navigate to:
-    * localhost:3000
+    ```bash
+        cd ../client
+        npm install
+    ```
+3. Set up .env file:
+    ```plaintext
+        OMDb=your_apiKey
+    ```
+4. Run application:
+    ```bash
+        npm run develop
+    ```
+5. Navigate to:
+    ```plaintext
+        localhost:3000
+    ```
 
 ## Technologies Used
 1. Front-end: React, HTML/CSS
