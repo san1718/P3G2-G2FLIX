@@ -59,7 +59,7 @@ If you want to have it in local:
 3. Authentication: JWT
 
 ## Summary
-This search engine will let the user to save their favorite titles and recommend snacks to go with it, if wanted.
+This search engine will let the user to save their favorite titles from books and movies.
 The user will be able to delete the titles later on if desired the list if not needed anymore.
 
 ## Links
