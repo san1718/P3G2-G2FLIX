@@ -25,11 +25,11 @@ As time goes by and you started to change the titles you enjoy, simply remove th
 
 ## Installation / Usage
 If you want to have it in local:
-1. Clone repository:
+1. **Clone repository:**
     ```bash
     git clone git@github.com:san1718/P3G2-G2FLIX.git
     ```
-2. Install dependencies:
+2. **Install dependencies:**
 * Server
     ```bash
         cd server
@@ -40,23 +40,23 @@ If you want to have it in local:
         cd ../client
         npm install
     ```
-3. Set up .env file:
+3. **Set up `.env` file:**
     ```plaintext
         OMDb=your_apiKey
     ```
-4. Run application:
+4. **Run application:**
     ```bash
         npm run develop
     ```
-5. Navigate to:
+5. **Open browser and navigate to:**
     ```plaintext
         localhost:3000
     ```
 
 ## Technologies Used
-1. Front-end: React, HTML/CSS
-2. Back-end: Node.js, Express, MongoDB
-3. Authentication: JWT
+1. **Front-end:** React, HTML/CSS
+2. **Back-end:** Node.js, Express, MongoDB
+3. **Authentication:** JWT
 
 ## Summary
 This search engine will let the user to save their favorite titles from books and movies.
